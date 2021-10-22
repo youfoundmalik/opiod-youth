@@ -11,10 +11,15 @@ const ThreeInOne = ({
   maxwidth,
   justify,
   innerjustify,
+  align,
+  h1Display,
 }) => {
   return (
-    <div className="three-in-one__" style={{ justifyContent: `${justify}` }}>
-      <Heading>{heading}</Heading>
+    <div
+      className="three-in-one__"
+      style={{ justifyContent: `${justify}`, textAlign: `${align}` }}
+    >
+      <Heading h1Display={h1Display}>{heading}</Heading>
       <InnerDiv maxwidth={maxwidth} justify={innerjustify}>
         <img src={mainImg} style={{ width: `${imgWidth}` }} alt="graphic" />
         {children}

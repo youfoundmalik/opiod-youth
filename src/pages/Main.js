@@ -9,154 +9,77 @@ import DoubleImg from "../components/doubleRoundImg/DoubleImg";
 import ParagraphBox from "../components/common/ParagraphBox";
 import SidebySide from "../components/sideByside/SideBySide";
 
-import illustration1 from "../images/illustrations/Clinician_Illustrations-01.svg";
-import illustration2 from "../images/illustrations/Clinician_Illustrations-02.png";
-import illustration3 from "../images/illustrations/Clinician_Illustrations-03.png";
-import illustration4 from "../images/illustrations/Clinician_Illustrations-04.svg";
-import illustration5 from "../images/illustrations/Clinician_Illustrations-05.png";
-import illustration6 from "../images/illustrations/Clinician_Illustrations-06.png";
-import illustration7 from "../images/illustrations/Clinician_Illustrations-07.svg";
-import illustration8 from "../images/illustrations/Clinician_Illustrations-08.svg";
-import illustration9 from "../images/illustrations/Clinician_Illustrations-09.png";
-import illustration10 from "../images/illustrations/Clinician_Illustrations-10.svg";
-
-import Arche from "../images/logos/Arche.png";
-import UofA from "../images/logos/UofALogo.png";
-import Trekk from "../images/logos/Trekk.png";
-import AGBlack from "../images/logos/AGLogoBlack.png";
-import AHSWhite from "../images/logos/AHSWhite.png";
+import Graphics from "../images/Graphics";
+import Slider from "../components/slider/Slider";
 
 const Main = () => {
   const welcome = [
     {
-      heading: "Opioids and Children’s Pain",
-      mainImg: `${illustration1}`,
-      imgWidth: "95%",
-      maxwidth: "50%",
-    },
-    {
-      message:
-        "Opioids are one of many effective pain management tools for children with moderate to severe pain, but there is still uncertainty about the future harms from short-term prescribing. This is why healthcare providers need to prescribe responsibly.",
-    },
-  ];
-
-  const consideration = [
-    {
-      heading: "When to Consider Prescribing Opioids",
-    },
-    {
-      content:
-        "Use non-opioid treatments first. Consider your patient's pain and the treatment context when developing your treatment plan.",
-    },
-    {
-      content:
-        "Always use physical and psychological interventions when treating pain.",
-    },
-    {
-      content:
-        "When opioids are required to treat moderate and severe pain, add them to non-opioid treatment and interventions.",
-    },
-    {
-      maxwidth: "80%",
-      imageOne: `${illustration2}`,
-      imageTwo: `${illustration3}`,
-    },
-  ];
-  const potentialRisk = [
-    {
-      heading: "Potential Risks",
-      mainImg: `${illustration4}`,
-      imgWidth: "80%",
+      heading: "Opioids don’t have to be scary!",
+      mainImg: [Graphics.svg[0]],
+      imgWidth: "70%",
       maxwidth: "55%",
-      justify: "center",
+      align: "center",
+      justify: "",
+      innerjustify: "",
     },
     {
       message:
-        "Clinicians worry about the long-term eects of opioid use in children and youth. Asystematic review led by researchers at the University of Alberta shows that it is still unclear whether short-duration (≤2 weeks) therapeutic opioid use in children results in increased risk of non-medical use in the future. Some research indicates that exposure to therapeutic opioids at some point in a child's lifetime may be associated with non-medical opioid use.",
-      other:
-        "Other factors that may increase or decrease the risk of future harm are also unclear.",
-    },
-  ];
-  const guidance = [
-    { heading: "Prescribing Guidance for Children and Youth" },
-    {
-      maxwidth: "50%",
-      imageOne: `${illustration5}`,
-      imageTwo: `${illustration6}`,
+        "There may be a time when your healthcare provider prescribes you opioids. Opioids are sometimes needed for children and youth. Know the information, so you can be informed when talking to your healthcare provider about opioids.",
+      bubble:
+        "Be sure to tell your healthcare provider about any previous history of opioid use and if you are currently using any substances or medicines that are not prescribed to you. This will help your healthcare provider provide the best and safest care for you.",
     },
     {
-      heading: "Health Canada recommends",
-      list1: "No hydrocodone under 6",
-      list2: "No codeine under 18",
-      list3: "Limited tramadol under 18",
-    },
-    {
-      size: "35%",
-      spacing: "2% 0",
+      size: "auto",
+      spacing: "2% 12%",
       background: "#F2F2F2",
     },
   ];
-  const talking = [
+  const what = [
     {
-      heading: "Talking with Patients and Families",
-      mainImg: `${illustration7}`,
-      imgWidth: "85%",
-      maxwidth: "80%",
-      justify: "center",
+      heading: "What Are Opioids?",
+      mainImg: [Graphics.svg[1]],
+      imgWidth: "70%",
+      maxwidth: "55%",
+      align: "center",
+      justify: "",
+      innerjustify: "",
     },
     {
-      size: "auto",
-      spacing: "3% 15%",
-      background: "#FFF",
-    },
-    {
-      message1:
-        "With increasing media coverage of the opioid crisis, patients and families are likely to have questions and concerns about opioid treatment plans. ",
-      message2:
-        "It is important that healthcare providers take the time to discuss safe usage, storage, and disposal of opioid prescriptions with families.",
-      message3:
-        "Be sure to use clear and concise messaging in these conversations. ",
-      message4: "Here are 4 things to make sure your patients know:",
-    },
-    {
-      maxwidth: "100%",
-      imageTwo: `${illustration8}`,
-    },
-    {
-      size: "auto",
-      spacing: "4% 15%",
-      background: "#FFF",
+      message:
+        "Opioids are a type of medication used to help reduce pain. Opioids can be prescribed for children, youth, and adults",
     },
   ];
-  const usage = [
+  const how = [
     {
-      heading: "Minimizing the Risks",
-      mainImg: `${illustration9}`,
-      imgWidth: "95%",
-      maxwidth: "60%",
+      heading: "How do they work?",
+      mainImg: [Graphics.svg[2]],
+      imgWidth: "40%",
+      maxwidth: "55%",
+      align: "center",
     },
     {
-      size: "50%",
-      spacing: "2% 10%",
-      background: "#FFF",
+      message:
+        "Opioids are strong pain relief medications. They work by attaching to receptors in your brain that reduce your feelings of pain and make you feel better.",
     },
     {
-      heading: "A discussion on safer usage should include:",
-      list1:
-        "The importance of taking the appropriate dose and following the medication schedule",
-      list2: "When to seek reassessment for under-treated pain",
-      list3:
-        "The potential warning signs of inappropriate use, suchas using opioids to help with their mood or to reduce anxiety, or taking more than prescribed",
+      mainImg: [Graphics.svg[3]],
+      imgWidth: "45%",
+      maxwidth: "55%",
+      align: "center",
+      h1Display: "none",
+    },
+    {
+      size: "100%",
+      align: "left",
+      background: "#D8EBF4",
+      spacing: "3% 0",
     },
   ];
-  const storage = [
-    { heading: "Discussing Safe Storage and Return" },
-    { maxwidth: "50%", imageTwo: `${illustration10}` },
+  const when = [
     {
-      heading: "A discussion on safe storage should include:",
-      list1:
-        "The importance of keeping pills in their packaging and out of children’s reach",
-      list2: "Safe return of remaining opioids to pharmacies",
+      message:
+        "Opioids are prescribed when people are in a lot of pain and other painkillers, like acetaminophen (Tylenol®) or ibuprofen (Advil®), aren’t enough.",
     },
   ];
   const footer = [
@@ -185,17 +108,17 @@ const Main = () => {
     },
     {
       maxwidth: "80%",
-      imageOne: `${Arche}`,
+      imageOne: `${Graphics.png[0]}`,
       linkOne:
         "https://www.ualberta.ca/pediatrics/pediatric-research/affiliated-research-units/alberta-research-centre-for-health-evidence-arche/index.html",
-      imageTwo: `${UofA}`,
+      imageTwo: `${Graphics.png[1]}`,
       linkTwo: "https://www.ualberta.ca/research/our-research/index.html",
     },
     {
       maxwidth: "80%",
-      imageOne: `${Trekk}`,
+      imageOne: `${Graphics.png[2]}`,
       linkOne: "Trekk Logo: https://trekk.ca/",
-      imageTwo: `${AGBlack}`,
+      imageTwo: `${Graphics.png[3]}`,
       linkTwo: "https://www.antigravitydesignco.com/",
     },
     {
@@ -211,77 +134,60 @@ const Main = () => {
       <div className="bodyArea">
         <Section id="welcome">
           <ThreeInOne {...welcome[0]}>
-            <ParagraphBox>
+            <ParagraphBox size="85%">
               <p>{welcome[1].message}</p>
             </ParagraphBox>
+            <ParagraphBox {...welcome[2]}>
+              <p>{welcome[1].bubble}</p>
+            </ParagraphBox>
           </ThreeInOne>
         </Section>
-        <Section id="consideration">
-          <Heading>{consideration[0].heading}</Heading>
-          <InnerDiv maxwidth="50%">
-            <p className="underline">{consideration[1].content}</p>
-            <p className="underline">{consideration[2].content}</p>
-            <p>{consideration[3].content}</p>
-            <DoubleImg {...consideration[4]} />
-          </InnerDiv>
-          <div className="potential-risk">
-            <ThreeInOne {...potentialRisk[0]}>
-              <ParagraphBox>
-                <p>{potentialRisk[1].message}</p>
-                <p>{potentialRisk[1].other}</p>
-              </ParagraphBox>
-            </ThreeInOne>
-          </div>
-        </Section>
-        <Section id="guidance">
-          <Heading>{guidance[0].heading}</Heading>
-          <DoubleImg {...guidance[1]} />
-          <ParagraphBox {...guidance[3]}>
-            <p>{guidance[2].heading}</p>
-            <li>{guidance[2].list1}</li>
-            <li>{guidance[2].list2}</li>
-            <li>{guidance[2].list3}</li>
-          </ParagraphBox>
-        </Section>
-        <Section id="talking">
-          <ThreeInOne {...talking[0]}>
-            <ParagraphBox {...talking[1]}>
-              <span>{talking[2].message1}</span>
-              <span>{talking[2].message2}</span>
-              <span>{talking[2].message3}</span>
+        <Section id="what">
+          <ThreeInOne {...what[0]}>
+            <ParagraphBox size="60%">
+              <p>{what[1].message}</p>
             </ParagraphBox>
+          </ThreeInOne>
+        </Section>
+        <Section id="how">
+          <ThreeInOne {...how[0]}>
+            <ParagraphBox size="60%" align="left">
+              <p>{how[1].message}</p>
+            </ParagraphBox>
+          </ThreeInOne>
+          <ThreeInOne {...how[2]}>
+            <ParagraphBox {...how[3]}>
+              <p className="primary">
+                Some common opioids you may have heard of include:
+              </p>
+              <li>Morphine</li>
+              <li>Codeine (like Tylenol #3®)</li>
+              <li>Oxycodone (like Percocet®)</li>
+            </ParagraphBox>
+          </ThreeInOne>
+        </Section>
+        <Section id="when">
+          <Heading>When are they used?</Heading>
+          <InnerDiv maxwidth="90%">
             <SidebySide
-              {...talking[3]}
-              sideOne={
-                <ParagraphBox {...talking[4]}>
-                  <p>{talking[2].message4}</p>
-                </ParagraphBox>
-              }
+              maxwidth="70%"
+              imageOne={Graphics.svg[4]}
+              sideTwo={<p>{when[0].message}</p>}
             />
-          </ThreeInOne>
-        </Section>
-        <Section id="usage">
-          <ThreeInOne {...usage[0]}>
-            <ParagraphBox {...usage[1]}>
-              <p>{usage[2].heading}</p>
-              <li>{usage[2].list1}</li>
-              <li>{usage[2].list2}</li>
-              <li>{usage[2].list3}</li>
-            </ParagraphBox>
-          </ThreeInOne>
-        </Section>
-        <Section id="storage">
-          <Heading>{storage[0].heading}</Heading>
-          <SidebySide
-            {...storage[1]}
-            sideOne={
-              <ParagraphBox>
-                <p>{storage[2].heading}</p>
-                <li>{storage[2].list1}</li>
-                <li>{storage[2].list2}</li>
+            <div className="layer2__">
+              <ParagraphBox align="left">
+                <p>
+                  Opioids are most often used for a short time when a person has
+                  intense pain. Examples of when opioids are used for young
+                  people include:
+                </p>
+                <li>If you break a large bone (fractures)</li>
+                <li>After surgery</li>
+                <li>If you have appendicitis</li>
               </ParagraphBox>
-            }
-          />
+              <Slider />
+            </div>
+          </InnerDiv>
         </Section>
         <Section id="links">
           <InnerDiv>
@@ -330,7 +236,7 @@ const Main = () => {
                 target="_blank"
                 href="https://www.albertahealthservices.ca/scns/page9682.aspx"
               >
-                <img src={AHSWhite} alt="graphic" />
+                <img src={Graphics.png[4]} alt="graphic" />
               </a>
             </InnerDiv>
           </div>

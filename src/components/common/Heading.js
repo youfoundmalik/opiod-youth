@@ -1,9 +1,9 @@
 import React from 'react'
 import './index.scss'
 
-const Heading = ({children}) => {
+const Heading = ({children, h1Display}) => {
     return (
-        <h1>
+        <h1 style={{display: `${h1Display}`}}>
             {children}
         </h1>
     )
