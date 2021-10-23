@@ -13,6 +13,7 @@ const ThreeInOne = ({
   innerjustify,
   align,
   h1Display,
+  imgDisplay,
 }) => {
   return (
     <div
@@ -21,7 +22,7 @@ const ThreeInOne = ({
     >
       <Heading h1Display={h1Display}>{heading}</Heading>
       <InnerDiv maxwidth={maxwidth} justify={innerjustify}>
-        <img src={mainImg} style={{ width: `${imgWidth}` }} alt="graphic" />
+        <img src={mainImg} style={{ width: `${imgWidth}`, display: `${imgDisplay}` }} alt="graphic" />
         {children}
       </InnerDiv>
     </div>

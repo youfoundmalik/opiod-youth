@@ -5,6 +5,12 @@
   p {
     font-weight: 600 !important;
   }
+  .primary {
+    color: $mainColor;
+  }
+  .white{
+    color: #fff;
+  }
 
   #welcome {
     .three-in-one__ {
@@ -13,7 +19,7 @@
       }
     }
   }
-  #what{
+  #what {
     border-top: 2px solid $altBAckground;
     .three-in-one__ {
       h1 {
@@ -21,46 +27,159 @@
       }
     }
   }
-  #how{
+  #how {
     border-top: 2px solid $altBAckground;
     .three-in-one__ {
       h1 {
         color: $mainColor;
       }
-      .paragraph-box{
+      .paragraph-box {
         gap: 5px;
-        .primary{
-          color: $mainColor;
-        }
-        li{
+
+        li {
           margin-left: 15px;
         }
       }
     }
   }
-  #when{
+  #whenAre {
     background-color: $thirdColor;
     gap: 20px;
-    h1{
+    h1 {
       color: $blue;
     }
     .side-side__ {
       gap: 5%;
       align-items: center;
-      p{
+      p {
         text-align: left;
       }
     }
-    .layer2__{
+    .layer2__ {
       width: 70%;
       display: grid;
       grid-template-columns: 1fr 1fr;
       align-items: center;
 
-      li{
+      li {
         margin-left: 15px;
       }
     }
+  }
+  #safe{
+    background-color: $secondColor;
+    img{
+      width: 100%;
+    }
+    h1,p{
+      color: #fff;
+    }
+    .inner-div_{
+      gap: 10px;
+    }
+  }
+  #whatDo{
+    h1{
+      color: $mainColor;
+    }
+    .split__{
+      .column1{
+        display: grid;
+        justify-content: flex-start;
+      }
+      .column2{
+        display: grid;
+        justify-content: flex-end;
+      }
+    }
+  }
+  #effects{
+    background-color: $redBackground;
+    h1{
+      color: #fff;
+    }
+    .inner-div_{
+      gap: 10px;
+    }
+    
+    .split__{
+      .column1{}
+      .column2{
+        p{
+          font-size: 16px;
+          line-height: 18px;
+        }
+        .paragraph-box{
+          gap: 20px;
+          .three-in-one__{
+            img{
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #crisis {
+    h1{
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+      span{
+        font-weight: 800;
+      }
+    }
+  }
+  #misuse {
+    border-top: 2px solid $altBAckground;
+    h1{
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+    }
+    .inner-div_{
+      gap: 50px;
+    }
+  }
+  #whenTo {
+    border-top: 2px solid $altBAckground;
+    h1{
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+    }
+    .split__{
+      .paragraph-box{
+        gap: 5px;
+        li{
+          font-weight: 400;
+          font-size: 16px;
+  
+          span{
+            position: relative;
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+  #remember{
+    background-color: $thirdColor;
+    gap: 0px;
+    .inner-div_{
+      gap: 50px;
+      .paragraph-box{
+        gap: 5px;
+        span{
+          position: relative;
+          left: 10px;
+        }
+      }
+    }
+
   }
   #links {
     padding-bottom: 0px;
@@ -70,8 +189,8 @@
     p {
       text-align: center;
     }
-    .yellow-background {
-      background-color: $mainColor;
+    .color-background {
+      background-color: $thirdColor;
       width: 100%;
       font-weight: 600 !important;
       padding: 1% 0;
@@ -109,7 +228,7 @@
       }
     }
   }
-  .footer {
+  #footer {
     padding: 30px;
     background-color: $altBAckground;
     p {
