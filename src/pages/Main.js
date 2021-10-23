@@ -83,7 +83,22 @@ const Main = () => {
         "Opioids are prescribed when people are in a lot of pain and other painkillers, like acetaminophen (Tylenol®) or ibuprofen (Advil®), aren’t enough.",
     },
   ];
-  const managing = [];
+  const managing = [
+    {
+      heading: "Managing Pain is Important!",
+      message1:
+        "If pain is not treated, it can harm your physical and mental health. Pain can make you feel afraid and anxious. Reducing pain helps improve your overall quality of life. ",
+      message2:
+        "When using prescribed opioids, you have to be careful, like you should with any medicine. Remember, sometimes opioids are the best way to manage your pain.",
+      message3:
+        "There may be other options, along with opioids, to help with your pain. The options available to you depend on your situation. You and your parent/guardian can talk with your doctor to know more about your options.",
+    },
+    {
+      height: "150px",
+      alignI: "center",
+      align: "left",
+    },
+  ];
   const safe = [
     {
       id: 1,
@@ -174,7 +189,7 @@ const Main = () => {
         id: 3,
         image: [Graphics.svg[24]],
         message: "If someone can't wake you up",
-      }
+      },
     ],
   ];
   const crisis = [
@@ -335,7 +350,72 @@ const Main = () => {
             </div>
           </InnerDiv>
         </Section>
-        <Section id="managing"></Section>
+        <Section id="managing">
+          <Heading>{managing[0].heading}</Heading>
+          <InnerDiv maxwidth="60%">
+            <div className="holder">
+              <ParagraphBox
+                {...managing[1]}
+                background="#D8EBF4"
+                spacing="0 150px 0 180px"
+              >
+                <p>{managing[0].message1}</p>
+              </ParagraphBox>
+              <div
+                style={{
+                  width: "100%",
+                  textAlign: "left",
+                  position: "absolute",
+                  bottom: "-3px",
+                  left: "-50px",
+                }}
+              >
+                <img src={Graphics.svg[8]} alt="graphics" width="200px" />
+              </div>
+            </div>
+            <div className="holder">
+              <ParagraphBox
+                {...managing[1]}
+                background="#F2F2F2"
+                spacing="0 320px 0 80px"
+              >
+                <p>{managing[0].message2}</p>
+              </ParagraphBox>
+              <div
+                style={{
+                  width: "100%",
+                  textAlign: "right",
+                  position: "absolute",
+                  bottom: "-3px",
+                  right: "10px",
+                }}
+              >
+                <img src={Graphics.svg[9]} alt="graphics" width="300px" />
+              </div>
+            </div>
+            <div className="holder">
+              <ParagraphBox
+                {...managing[1]}
+                background="#D8EBF4"
+                spacing="0 100px 0 280px"
+              >
+                <p>{managing[0].message3}</p>
+              </ParagraphBox>
+              <div
+                style={{
+                  width: "100%",
+                  justifySelf: "flex-start",
+                  textAlign: "left",
+                  position: "absolute",
+                  bottom: "-3px",
+                  left: "5px",
+                }}
+              >
+                <img src={Graphics.svg[10]} alt="graphics" width="250px" />
+              </div>
+            </div>
+          </InnerDiv>
+        </Section>
         <Section id="safe">
           <InnerDiv maxwidth="40%">
             <Heading>Be Safe!</Heading>
@@ -420,19 +500,18 @@ const Main = () => {
               <ParagraphBox {...effects[1]} background="#263238">
                 <p className="white">{effects[0].warnings}</p>
                 <Split columns="1fr 1fr 1fr" gap="50px">
-                {
-                  effects[2].map(({id,image,message})=>{
-                  return(
-                    <ThreeInOne
-                  h1Display="none"
-                  mainImg={image}
-                  key={id}
-                  maxwidth="100%"
-                >
-                  <p className="white">{message}</p>
-                </ThreeInOne>
-                )
-                })}
+                  {effects[2].map(({ id, image, message }) => {
+                    return (
+                      <ThreeInOne
+                        h1Display="none"
+                        mainImg={image}
+                        key={id}
+                        maxwidth="100%"
+                      >
+                        <p className="white">{message}</p>
+                      </ThreeInOne>
+                    );
+                  })}
                 </Split>
               </ParagraphBox>
             </div>
@@ -500,7 +579,25 @@ const Main = () => {
             </Split>
           </ThreeInOne>
         </Section>
-        <Section id="where"></Section>
+        <Section id="where">
+          <InnerDiv maxwidth="60%">
+            <Heading>Where to Seek help</Heading>
+            <p>If you are experiencing signs of nonmedical opioid use, make sure to reach out and ask for help.</p>
+            <ParagraphBox size="100%" height="150px" spacing="3% 0" background="#D8EBF4">
+              <p>You can talk to a parent/guardian or another adult</p>
+            </ParagraphBox>
+          </InnerDiv>
+          <Split maxwidth="60%" columns="5fr 2fr" alignI="center">
+            <div className="column1">
+              <Heading>For a list of other resources click the following:</Heading>
+              <h2>Health Canada</h2>
+              <h2>AHS</h2>
+            </div>
+            <div className="column2">
+              <img src={Graphics.svg[34]} alt="graphic"/>
+            </div>
+          </Split>
+        </Section>
         <Section id="remember">
           <Heading>Remember</Heading>
           <InnerDiv maxwidth="60%">
