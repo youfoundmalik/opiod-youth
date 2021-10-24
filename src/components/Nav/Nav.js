@@ -13,64 +13,65 @@ const Nav = () => {
           duration={500}
           spy={true}
           exact="true"
-          offset={-51}
+          offset={-50}
         >
           Home
         </NavLink>
         <NavLink
-          to="consideration"
+          to="whenAre"
           activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
-          offset={-51}
+          offset={-50}
         >
-          {window.screen.width > 850 ? "Considerations" : "Consider"}
+          Use
         </NavLink>
         <NavLink
-          to="guidance"
+          to="managing"
           activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
-          offset={-51}
+          offset={-50}
         >
-          Guidance
+          {window.screen.width > 850 ? "Managing Pain" : "Pain"}
+        </NavLink>
+        
+        <NavLink
+          to="safe"
+          activeclassname="active"
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-50}
+        >
+          Instructions
         </NavLink>
         <NavLink
-          to="talking"
+          to="whatDo"
           activeclassname="active"
           smooth={true}
           duration={500}
           spy={true}
           exact="true"
-          offset={-51}
-        >
-          {window.screen.width > 850 ? "Talking with patients" : "Talking"}
-        </NavLink>
-        <NavLink
-          to="usage"
-          activeclassname="active"
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          offset={-51}
-        >
-          {window.screen.width > 850 ? "Safe Usage" : "Usage"}
-        </NavLink>
-        <NavLink
-          to="storage"
-          activeclassname="active"
-          smooth={true}
-          duration={500}
-          spy={true}
-          exact="true"
-          offset={-51}
+          offset={-50}
         >
           Storage
+        </NavLink>
+        <NavLink
+          to="crisis"
+          activeclassname="active"
+          smooth={true}
+          duration={500}
+          spy={true}
+          exact="true"
+          offset={-50}
+        >
+          {window.screen.width > 850 ? "Nonmedical Use" : "Nonmedical"}
         </NavLink>
         <NavLink
           to="links"
