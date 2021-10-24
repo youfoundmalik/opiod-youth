@@ -1,32 +1,50 @@
 @import "../../style.scss";
-.slider {
+.container{
   display: grid;
-  grid-template-columns: 1fr 8fr 1fr;
-  align-items: center;
-
-  .scrollLeft,
-  .scrollRight {
-    font-weight: 900;
-    font-size: 20px;
-    color: $secondColor;
-    cursor: pointer;
-  }
-
-  .slide {
-    display: block;
-    img{
-      width: 100%;
+  justify-items: center;
+  .slider {
+    display: grid;
+    grid-template-columns: 1fr 8fr 1fr;
+    align-items: center;
+  
+    .scrollLeft,
+    .scrollRight {
+      font-weight: 900;
+      font-size: 20px;
+      color: $secondColor;
+      cursor: pointer;
     }
-
-    #scrollText {
-      color: $secondColor !important;
-      font-size: 18px !important;
-      background: $thirdColor;
-      padding: 7px 15px;
-      border-radius: 20px;
-      display: inline;
-      position: relative;
-      top: -50px;
+  
+    .slide {
+      display: grid;
+      justify-items: center;
+      #scrollText {
+        color: $secondColor !important;
+        font-size: 18px !important;
+        background: $thirdColor;
+        padding: 7px 15px;
+        border-radius: 20px;
+        display: inline;
+        position: relative;
+        top: -50px;
+      }
+      
+    }
+  }
+  .toggleScroll {
+    width: 70%;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  
+    .toggleView {
+      flex-basis: 20%;
+      height: 2px;
+      background: $altBAckground;
+      color: transparent;
+    }
+    .active {
+      background: $mainColor !important;
     }
   }
 }

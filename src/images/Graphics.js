@@ -31,11 +31,11 @@ import illustration29 from "./illustrations/Youth_illustrations-29.svg";
 import illustration30 from "./illustrations/Youth_illustrations-30.svg";
 import illustration31 from "./illustrations/Youth_illustrations-31.svg";
 import illustration32 from "./illustrations/Youth_illustrations-32.svg";
-import illustration33 from "./illustrations/Youth_illustrations-33.svg";
+import illustration33 from "./illustrations/Youth_illustrations-33.png";
 import illustration34 from "./illustrations/Youth_illustrations-34.svg";
 import illustration35 from "./illustrations/Youth_illustrations-35.svg";
-import illustration36 from "./illustrations/Youth_illustrations-36.svg";
-import illustration37 from "./illustrations/Youth_illustrations-37.svg";
+import illustration36 from "./illustrations/Youth_illustrations-36.png";
+import illustration37 from "./illustrations/Youth_illustrations-37.png";
 
 
 import Arche from "./logos/Arche.png";

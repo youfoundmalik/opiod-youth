@@ -242,7 +242,14 @@ const Main = () => {
       margin: "0",
     },
   ];
-  const where = [];
+  const where = [
+    {
+      heading: "Where to Seek help",
+      subheading:
+        "If you are experiencing signs of nonmedical opioid use, make sure to reach out and ask for help. ",
+      heading2: "For a list of other resources click the following:",
+    },
+  ];
   const footer = [
     {
       heading: "Useful Links",
@@ -289,6 +296,52 @@ const Main = () => {
     },
   ];
 
+  const slide1 = [
+    {
+      img: `${Graphics.svg[5]}`,
+      text: "After surgery",
+    },
+    {
+      img: `${Graphics.svg[6]}`,
+      text: "Severe fracture",
+    },
+    {
+      img: `${Graphics.svg[7]}`,
+      text: "With appendicitis",
+    },
+  ];
+  const slide2 = [
+    {
+      img: `${Graphics.svg[21]}`,
+      text: "Dizziness",
+    },
+    {
+      img: `${Graphics.svg[22]}`,
+      text: "Constipation",
+    },
+    {
+      img: `${Graphics.svg[23]}`,
+      text: "Nausea or vomiting",
+    },
+    {
+      img: `${Graphics.svg[24]}`,
+      text: "Drowsiness",
+    },
+  ];
+  const slide3 = [
+    {
+      img: `${Graphics.svg[32]}`,
+      text: "You can talk to a parent/guardian or another adult",
+    },
+    {
+      img: `${Graphics.svg[35]}`,
+      text: "You can Kids Help Phone (1-800-668-6868), which provides free counselling 24 hours a day",
+    },
+    {
+      img: `${Graphics.svg[36]}`,
+      text: "You can talk to your doctor ",
+    },
+  ];
   return (
     <>
       <Nav />
@@ -346,7 +399,13 @@ const Main = () => {
                 <li>After surgery</li>
                 <li>If you have appendicitis</li>
               </ParagraphBox>
-              <Slider />
+              <Slider
+                slide={slide1}
+                toptextDisplay="none"
+                barDisplay="none"
+                imgwidth="100%"
+                btntext2Display="none"
+              />
             </div>
           </InnerDiv>
         </Section>
@@ -491,7 +550,24 @@ const Main = () => {
             <Heading>{effects[0].heading}</Heading>
             <p className="white">{effects[0].subheading}</p>
           </InnerDiv>
-          <ParagraphBox></ParagraphBox>
+          <ParagraphBox
+            size="70%"
+            alignI="center"
+            background="#D8EBF4"
+            justifyI="center"
+            spacing="2% 0"
+          >
+            <p>Common side effects include:</p>
+            <Slider
+              slide={slide2}
+              btntext1Display="none"
+              toptextDisplay="none"
+              imgwidth="70%"
+              maxwidth="100%"
+              gap="20px"
+              speclass="effectslider"
+            />
+          </ParagraphBox>
           <Split maxwidth="70%" columns="1fr 4fr" alignI="center" gap="20px">
             <div className="column1">
               <img src={Graphics.svg[20]} alt="graphics" />
@@ -580,21 +656,34 @@ const Main = () => {
           </ThreeInOne>
         </Section>
         <Section id="where">
-          <InnerDiv maxwidth="60%">
-            <Heading>Where to Seek help</Heading>
-            <p>If you are experiencing signs of nonmedical opioid use, make sure to reach out and ask for help.</p>
-            <ParagraphBox size="100%" height="150px" spacing="3% 0" background="#D8EBF4">
-              <p>You can talk to a parent/guardian or another adult</p>
+          <InnerDiv maxwidth="70%">
+            <Heading>{where[0].heading}</Heading>
+            <p>{where[0].subheading}</p>
+            <ParagraphBox
+              size="100%"
+              spacing="3% 0"
+              justifyI="center"
+              background="#D8EBF4"
+            >
+              <Slider
+                slide={slide3}
+                btntext1Display="none"
+                btntext2Display="none"
+                imgwidth="55%"
+                maxwidth="75%"
+                gap="20px"
+                speclass="whereslider"
+              />
             </ParagraphBox>
           </InnerDiv>
           <Split maxwidth="60%" columns="5fr 2fr" alignI="center">
             <div className="column1">
-              <Heading>For a list of other resources click the following:</Heading>
+              <Heading>{where[0].heading2}</Heading>
               <h2>Health Canada</h2>
               <h2>AHS</h2>
             </div>
             <div className="column2">
-              <img src={Graphics.svg[34]} alt="graphic"/>
+              <img src={Graphics.svg[34]} alt="graphic" />
             </div>
           </Split>
         </Section>

@@ -9,6 +9,7 @@ const ParagraphBox = ({
   align,
   height,
   alignI,
+  justifyI
 }) => {
   return (
     <div
@@ -20,6 +21,7 @@ const ParagraphBox = ({
         textAlign: `${align}`,
         height: `${height}`,
         alignItems: `${alignI}`,
+        justifyItems: `${justifyI}`,
       }}
     >
       {children}
