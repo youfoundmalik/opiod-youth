@@ -1,0 +1,367 @@
+@import "../style.scss";
+
+.bodyArea {
+  margin-top: 50px;
+  p {
+    font-weight: 600 !important;
+  }
+  .primary {
+    color: $mainColor;
+  }
+  .white {
+    color: #fff;
+  }
+
+  #welcome {
+    .three-in-one__ {
+      h1 {
+        color: $mainColor;
+      }
+    }
+  }
+  #what {
+    border-top: 2px solid $altBAckground;
+    .three-in-one__ {
+      h1 {
+        color: $mainColor;
+      }
+    }
+  }
+  #how {
+    border-top: 2px solid $altBAckground;
+    .three-in-one__ {
+      h1 {
+        color: $mainColor;
+      }
+      .paragraph-box {
+        gap: 5px;
+
+        li {
+          margin-left: 15px;
+        }
+      }
+    }
+  }
+  #whenAre {
+    background-color: $thirdColor;
+    gap: 20px;
+    h1 {
+      color: $blue;
+    }
+    .side-side__ {
+      gap: 5%;
+      align-items: center;
+      p {
+        text-align: left;
+      }
+    }
+    .layer2__ {
+      width: 70%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+
+      li {
+        margin-left: 15px;
+      }
+    }
+  }
+  #managing {
+    h1 {
+      color: $mainColor;
+    }
+    .holder {
+      position: relative;
+      display: grid;
+      align-items: center;
+    }
+  }
+  #safe {
+    background-color: $secondColor;
+    img {
+      width: 100%;
+    }
+    h1,
+    p {
+      color: #fff;
+    }
+    .inner-div_ {
+      gap: 10px;
+    }
+  }
+  #whatDo {
+    h1 {
+      color: $mainColor;
+    }
+    .split__ {
+      .column1 {
+        display: grid;
+        justify-content: flex-start;
+      }
+      .column2 {
+        display: grid;
+        justify-content: flex-end;
+      }
+    }
+  }
+  #effects {
+    background-color: $redBackground;
+    h1 {
+      color: #fff;
+    }
+    .inner-div_ {
+      gap: 10px;
+    }
+    .paragraph-box {
+      gap: 20px;
+    }
+    .split__ {
+      .column1 {
+      }
+      .column2 {
+        p {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        .paragraph-box {
+          gap: 20px;
+          .three-in-one__ {
+            img {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #crisis {
+    h1 {
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+      span {
+        font-weight: 800;
+      }
+    }
+  }
+  #misuse {
+    border-top: 2px solid $altBAckground;
+    h1 {
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+    }
+    .inner-div_ {
+      gap: 50px;
+    }
+  }
+  #whenTo {
+    border-top: 2px solid $altBAckground;
+    h1 {
+      color: $mainColor;
+    }
+    .three-in-one__ {
+      gap: 0px;
+    }
+    .split__ {
+      .paragraph-box {
+        gap: 5px;
+        li {
+          font-weight: 400;
+          font-size: 16px;
+
+          span {
+            position: relative;
+            left: 10px;
+          }
+        }
+      }
+    }
+  }
+  #where {
+    border-top: 2px solid $altBAckground;
+    gap: 100px;
+    h1 {
+      color: $mainColor;
+    }
+    .split__ {
+      h1 {
+        text-align: left;
+      }
+      .column1 {
+        display: grid;
+        gap: 20px;
+
+        h2 {
+          background-color: $thirdColor;
+          width: 80%;
+          padding: 10px 0;
+          border-radius: 50px;
+        }
+      }
+    }
+  }
+  #remember {
+    background-color: $thirdColor;
+    gap: 0px;
+    .inner-div_ {
+      gap: 50px;
+      .paragraph-box {
+        gap: 5px;
+        span {
+          position: relative;
+          left: 10px;
+        }
+      }
+    }
+  }
+  #links {
+    padding-bottom: 0px;
+    h1 {
+      color: $mainColor;
+    }
+    p {
+      text-align: center;
+    }
+    .color-background {
+      background-color: $thirdColor;
+      width: 100%;
+      font-weight: 600 !important;
+      padding: 1% 0;
+      border-radius: 50px;
+      a {
+        text-decoration: none;
+        color: $darkBackground;
+      }
+    }
+    .double-img__ {
+      align-items: center;
+    }
+
+    .sectionTwo {
+      background-color: $secondColor;
+      padding: 50px 0;
+      p {
+        font-weight: bold !important;
+        color: #fff;
+      }
+      .link {
+        font-weight: 400 !important;
+        color: rgba(255, 255, 255, 0.945);
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: bold;
+        }
+      }
+      a {
+        width: 30%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  #footer {
+    padding: 30px;
+    background-color: $altBAckground;
+    p {
+      text-align: center;
+      font-style: italic;
+      font-weight: 400 !important;
+    }
+  }
+}
+
+@media screen and (max-width: 850px) and (min-width: 500px) {
+  #managing {
+    img {
+      opacity: 0.1;
+    }
+    .paragraph-box {
+      padding: 0 65px !important;
+    }
+  }
+  #whenAre {
+    .layer2__ {
+      width: 100% !important;
+    }
+    p,
+    li {
+      text-align: left;
+    }
+  }
+  #safe {
+    .split__ {
+      width: 90% !important;
+      gap: 20px !important;
+    }
+  }
+  #whatDo {
+    .split__ {
+      gap: 50px;
+    }
+  }
+  #effects {
+    .split__ {
+      width: 90% !important;
+      .column1 {
+      }
+      .column2 {
+        p {
+          font-size: 16px;
+          line-height: 18px;
+        }
+        .paragraph-box {
+          gap: 20px;
+          padding: 5% 12% !important;
+          .split__ {
+            gap: 20px !important;
+          }
+          .three-in-one__ {
+            img {
+              width: 100px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #where {
+    .split__ {
+      width: 80% !important;
+    }
+  }
+}
+
+@media screen and (max-width: 450px) {
+  #managing {
+    img {
+      opacity: 0.1;
+    }
+  }
+  #whenAre {
+    .layer2__ {
+      width: 90% !important;
+      grid-template-columns: 1fr !important;
+    }
+  }
+  #where {
+    .split__ {
+      width: 90% !important;
+      h1 {
+        text-align: center !important;
+      }
+      .column1 {
+        h2 {
+          width: 100% !important;
+        }
+      }
+      .column2 {
+        width: 70% !important;
+      }
+    }
+  }
+}
