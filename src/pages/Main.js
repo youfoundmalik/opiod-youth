@@ -48,7 +48,7 @@ const Main = () => {
     },
     {
       message:
-        "Opioids are a type of medication used to help reduce pain. Opioids can be prescribed for children, youth, and adults",
+        "Opioids are a type of medication used to help reduce pain. Opioids can be prescribed for children, youth, and adults.",
     },
   ];
   const how = [
@@ -217,7 +217,7 @@ const Main = () => {
     },
     {
       subheading:
-        "We do not know for sure if using prescription opioids for a short amount of time leads to nonmedical use later. And it is not clear what makes some people more likely than others to start using opioids in a harmful way. So, it is important to be careful when taking opioids. If you are worried about you or a loved one make sure to let your doctor know",
+        "We do not know for sure if using prescription opioids for a short amount of time leads to nonmedical use later. And it is not clear what makes some people more likely than others to start using opioids in a harmful way. So, it is important to be careful when taking opioids. If you are worried about you or a loved one make sure to let your doctor know.",
       image: [Graphics.svg[30]],
     },
   ];
@@ -602,7 +602,7 @@ const Main = () => {
               People start using opioids without a prescription or for a reason
               other than what the doctor intended for a number of reasons, but
               quickly find they need to take more to get the same effect.{" "}
-              <span>This can be dangerous</span>
+              <span>This can be dangerous.</span>
             </p>
           </ThreeInOne>
         </Section>
