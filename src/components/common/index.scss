@@ -16,9 +16,12 @@ li {
   display: grid;
   justify-content: center;
   border-radius: 500px;
+  .inner{
+    display: grid;
+  }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 64em) {
   h1 {
     font-size: 40px !important;
   }
@@ -27,13 +30,13 @@ li {
     text-align: center;
   }
   .paragraph-box {
-    width: 80% !important;
+    width: 80% ;
     margin: 0;
     justify-self: center;
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 48em) {
   h1 {
     font-size: 30px !important;
   }
@@ -42,8 +45,7 @@ li {
     font-size: 16px;
   }
   .paragraph-box {
-    width: 90% !important;
-    padding: 5% 5% !important;
+    width: 90% ;
     border-radius: 10px;
   }
 }

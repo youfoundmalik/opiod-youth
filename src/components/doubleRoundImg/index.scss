@@ -17,15 +17,3 @@
     justify-content: flex-start;
   }
 }
-
-@media screen and (max-width: 48em) {
-  .double-img__ {
-    width: 90% !important;
-  }
-}
-
-@media screen and (max-width: 64em) {
-  .double-img__ {
-    width: 80% !important;
-  }
-}

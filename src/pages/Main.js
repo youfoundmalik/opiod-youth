@@ -14,75 +14,34 @@ import Slider from "../components/slider/Slider";
 import Split from "../components/common/splitSection/Split";
 
 const Main = () => {
-  const welcome = [
-    {
-      heading: "Opioids don’t have to be scary!",
-      mainImg: [Graphics.svg[0]],
-      imgWidth: "70%",
-      maxwidth: "55%",
-      align: "center",
-      justify: "",
-      innerjustify: "",
-    },
-    {
-      message:
-        "There may be a time when your healthcare provider prescribes you opioids. Opioids are sometimes needed for children and youth. Know the information, so you can be informed when talking to your healthcare provider about opioids.",
-      bubble:
-        "Be sure to tell your healthcare provider about any previous history of opioid use and if you are currently using any substances or medicines that are not prescribed to you. This will help your healthcare provider provide the best and safest care for you.",
-    },
-    {
-      size: "auto",
-      spacing: "2% 12%",
-      background: "#F2F2F2",
-    },
-  ];
-  const what = [
-    {
-      heading: "What Are Opioids?",
-      mainImg: [Graphics.svg[1]],
-      imgWidth: "70%",
-      maxwidth: "55%",
-      align: "center",
-      justify: "",
-      innerjustify: "",
-    },
-    {
-      message:
-        "Opioids are a type of medication used to help reduce pain. Opioids can be prescribed for children, youth, and adults.",
-    },
-  ];
-  const how = [
-    {
-      heading: "How do they work?",
-      mainImg: [Graphics.svg[2]],
-      imgWidth: "40%",
-      maxwidth: "55%",
-      align: "center",
-    },
-    {
-      message:
-        "Opioids are strong pain relief medications. They work by attaching to receptors in your brain that reduce your feelings of pain and make you feel better.",
-    },
-    {
-      mainImg: [Graphics.svg[3]],
-      imgWidth: "45%",
-      maxwidth: "55%",
-      align: "center",
-      h1Display: "none",
-    },
-    {
-      size: "100%",
-      align: "left",
-      background: "#D8EBF4",
-      spacing: "3% 0",
-    },
-  ];
-  const whenAre = [
-    {
-      message:
-        "Opioids are prescribed when people are in a lot of pain and other painkillers, like acetaminophen (Tylenol®) or ibuprofen (Advil®), aren’t enough.",
-    },
-  ];
+  const welcome = {
+    heading: "Opioids don’t have to be scary!",
+    mainImg: [Graphics.svg[0]],
+    message:
+      "There may be a time when your healthcare provider prescribes you opioids. Opioids are sometimes needed for children and youth. Know the information, so you can be informed when talking to your healthcare provider about opioids.",
+    bubble:
+      "Be sure to tell your healthcare provider about any previous history of opioid use and if you are currently using any substances or medicines that are not prescribed to you. This will help your healthcare provider provide the best and safest care for you.",
+  };
+
+  const what = {
+    heading: "What Are Opioids?",
+    mainImg: [Graphics.svg[1]],
+    message:
+      "Opioids are a type of medication used to help reduce pain. Opioids can be prescribed for children, youth, and adults.",
+  };
+
+  const how = {
+    heading: "How do they work?",
+    mainImg1: [Graphics.svg[2]],
+    message:
+      "Opioids are strong pain relief medications. They work by attaching to receptors in your brain that reduce your feelings of pain and make you feel better.",
+    mainImg2: [Graphics.svg[3]],
+  };
+
+  const whenAre = {
+    message:
+      "Opioids are prescribed when people are in a lot of pain and other painkillers, like acetaminophen (Tylenol®) or ibuprofen (Advil®), aren’t enough.",
+  };
   const managing = [
     {
       heading: "Managing Pain is Important!",
@@ -250,6 +209,7 @@ const Main = () => {
       heading2: "For a list of other resources click the following:",
     },
   ];
+
   const footer = [
     {
       heading: "Useful Links",
@@ -263,6 +223,9 @@ const Main = () => {
       link3:
         "https://www.google.com/url?q=https://www.canada.ca/en/health-canada/services/opioids.html&sa=D&source=docs&ust=1634759298037000&usg=AOvVaw37bkCsZ5xgKUmM5wV4drUb",
       text3: "Health Canada",
+      link4:
+        "https://www.canada.ca/en/health-canada/services/safe-disposal-prescription-drugs.html",
+      text4: "Safe Disposal Information",
     },
     {
       size: "auto",
@@ -288,11 +251,6 @@ const Main = () => {
       linkOne: "Trekk Logo: https://trekk.ca/",
       imageTwo: `${Graphics.png[3]}`,
       linkTwo: "https://www.antigravitydesignco.com/",
-    },
-    {
-      size: "100%",
-      spacing: "5% 0",
-      background: "#F2F2F2",
     },
   ];
 
@@ -342,74 +300,89 @@ const Main = () => {
       text: "You can talk to your doctor ",
     },
   ];
+  
   return (
-    <>
+    <div className="body">
       <Nav />
       <div className="bodyArea">
         <Section id="welcome">
-          <ThreeInOne {...welcome[0]}>
-            <ParagraphBox size="85%">
-              <p>{welcome[1].message}</p>
+          <ThreeInOne
+            altclass="welcome_3in1"
+            heading={welcome.heading}
+            mainImg={welcome.mainImg}
+          >
+            <ParagraphBox altclass="welcome_msg1">
+              <p>{welcome.message}</p>
             </ParagraphBox>
-            <ParagraphBox {...welcome[2]}>
-              <p>{welcome[1].bubble}</p>
+            <ParagraphBox altclass="welcome_msg2">
+              <p>{welcome.bubble}</p>
             </ParagraphBox>
           </ThreeInOne>
         </Section>
+
         <Section id="what">
-          <ThreeInOne {...what[0]}>
-            <ParagraphBox size="60%">
-              <p>{what[1].message}</p>
+          <ThreeInOne
+            altclass="what_3in1"
+            heading={what.heading}
+            mainImg={what.mainImg}
+          >
+            <ParagraphBox altclass="what_msg">
+              <p>{what.message}</p>
             </ParagraphBox>
           </ThreeInOne>
         </Section>
+
         <Section id="how">
-          <ThreeInOne {...how[0]}>
-            <ParagraphBox size="60%" align="left">
-              <p>{how[1].message}</p>
+          <ThreeInOne
+            heading={how.heading}
+            mainImg={how.mainImg1}
+            altclass="section1"
+          >
+            <ParagraphBox altclass="para_transparent">
+              <p>{how.message}</p>
             </ParagraphBox>
           </ThreeInOne>
-          <ThreeInOne {...how[2]}>
-            <ParagraphBox {...how[3]}>
+          <ThreeInOne mainImg={how.mainImg2} altclass="section2">
+            <ParagraphBox altclass="para_color">
               <p className="primary">
                 Some common opioids you may have heard of include:
               </p>
-              <li>Morphine</li>
-              <li>Codeine (like Tylenol #3®)</li>
-              <li>Oxycodone (like Percocet®)</li>
+              <div className="list">
+                <li>Morphine</li>
+                <li>Codeine (like Tylenol #3®)</li>
+                <li>Oxycodone (like Percocet®)</li>
+              </div>
             </ParagraphBox>
           </ThreeInOne>
         </Section>
+
         <Section id="whenAre">
           <Heading>When are they used?</Heading>
-          <InnerDiv maxwidth="90%">
+          <InnerDiv altclass="whenAre_inner">
             <SidebySide
-              maxwidth="70%"
+              altclass="first"
               imageOne={Graphics.svg[4]}
-              sideTwo={<p>{whenAre[0].message}</p>}
+              sideTwo={<p>{whenAre.message}</p>}
             />
             <div className="layer2__">
-              <ParagraphBox align="left">
+              <ParagraphBox>
                 <p>
                   Opioids are most often used for a short time when a person has
                   intense pain. Examples of when opioids are used for young
                   people include:
                 </p>
-                <li>If you break a large bone (fractures)</li>
-                <li>After surgery</li>
-                <li>If you have appendicitis</li>
+                <div className="list">
+                  <li>If you break a large bone (fractures)</li>
+                  <li>After surgery</li>
+                  <li>If you have appendicitis</li>
+                </div>
               </ParagraphBox>
-              <Slider
-                slide={slide1}
-                toptextDisplay="none"
-                barDisplay="none"
-                imgwidth="100%"
-                btntext2Display="none"
-              />
+              <Slider slide={slide1} />
             </div>
           </InnerDiv>
         </Section>
-        <Section id="managing">
+
+        {/* <Section id="managing">
           <Heading>{managing[0].heading}</Heading>
           <InnerDiv maxwidth="60%">
             <div className="holder">
@@ -474,8 +447,9 @@ const Main = () => {
               </div>
             </div>
           </InnerDiv>
-        </Section>
-        <Section id="safe">
+        </Section> */}
+
+        {/* <Section id="safe">
           <InnerDiv maxwidth="40%">
             <Heading>Be Safe!</Heading>
             <p>
@@ -497,8 +471,9 @@ const Main = () => {
               );
             })}
           </Split>
-        </Section>
-        <Section id="whatDo">
+        </Section> */}
+
+        {/* <Section id="whatDo">
           <Heading>{whatDo[0].heading}</Heading>
           <InnerDiv maxwidth="60%">
             <Split columns="5fr 2fr" alignI="center">
@@ -544,8 +519,9 @@ const Main = () => {
               </div>
             </Split>
           </InnerDiv>
-        </Section>
-        <Section id="effects">
+        </Section> */}
+
+        {/* <Section id="effects">
           <InnerDiv maxwidth="30%">
             <Heading>{effects[0].heading}</Heading>
             <p className="white">{effects[0].subheading}</p>
@@ -592,8 +568,9 @@ const Main = () => {
               </ParagraphBox>
             </div>
           </Split>
-        </Section>
-        <Section id="crisis">
+        </Section> */}
+
+        {/* <Section id="crisis">
           <ThreeInOne {...crisis[0]}>
             <p>{crisis[1].subheading}</p>
             <img src={crisis[1].image} alt="graphic" />
@@ -605,16 +582,18 @@ const Main = () => {
               <span>This can be dangerous.</span>
             </p>
           </ThreeInOne>
-        </Section>
-        <Section id="misuse">
+        </Section> */}
+
+        {/* <Section id="misuse">
           <ThreeInOne {...misuse[0]}>
             <p>{misuse[1].subheading}</p>
             <InnerDiv maxwidth="80%">
               <img src={misuse[1].image} alt="graphic" />
             </InnerDiv>
           </ThreeInOne>
-        </Section>
-        <Section id="whenTo">
+        </Section> */}
+
+        {/* <Section id="whenTo">
           <ThreeInOne {...whenTo[0]}>
             <p>{whenTo[1].subheading}</p>
             <img src={whenTo[1].image} alt="graphic" />
@@ -654,8 +633,9 @@ const Main = () => {
               </div>
             </Split>
           </ThreeInOne>
-        </Section>
-        <Section id="where">
+        </Section> */}
+
+        {/* <Section id="where">
           <InnerDiv maxwidth="70%">
             <Heading>{where[0].heading}</Heading>
             <p>{where[0].subheading}</p>
@@ -686,8 +666,9 @@ const Main = () => {
               <img src={Graphics.svg[34]} alt="graphic" />
             </div>
           </Split>
-        </Section>
-        <Section id="remember">
+        </Section> */}
+
+        {/* <Section id="remember">
           <Heading>Remember</Heading>
           <InnerDiv maxwidth="60%">
             <ParagraphBox align="left" size="80%">
@@ -715,37 +696,43 @@ const Main = () => {
             </ParagraphBox>
             <img src={Graphics.svg[33]} alt="graphic" />
           </InnerDiv>
-        </Section>
+        </Section> */}
+
         <Section id="links">
-          <InnerDiv>
+          <InnerDiv altclass="heading">
             <Heading>{footer[0].heading}</Heading>
             <p>{footer[0].subheading}</p>
           </InnerDiv>
-          <InnerDiv maxwidth="28%">
+          <InnerDiv altclass="color">
             <p className="color-background">{footer[1].text1}</p>
             <p className="color-background">
-              <a target="_blank" href={footer[1].link2}>
+              <a target="_blank" rel="noreferrer" href={footer[1].link2}>
                 {footer[1].text2}
               </a>
             </p>
             <p className="color-background">
-              <a target="_blank" href={footer[1].link3}>
+              <a target="_blank" rel="noreferrer" href={footer[1].link3}>
                 {footer[1].text3}
               </a>
             </p>
+            <p className="color-background">
+              <a target="_blank" rel="noreferrer" href={footer[1].link4}>
+                {footer[1].text4}
+              </a>
+            </p>
           </InnerDiv>
-          <InnerDiv maxwidth="50%">
+          <InnerDiv altclass="inner-box">
             <ParagraphBox {...footer[2]}>
               <p>{footer[3].message1}</p>
             </ParagraphBox>
             <DoubleImg {...footer[4]} />
-            <ParagraphBox {...footer[6]}>
+            <ParagraphBox altclass="box2" {...footer[6]}>
               <p>{footer[3].message2}</p>
             </ParagraphBox>
             <DoubleImg {...footer[5]} />
           </InnerDiv>
           <div className="sectionTwo">
-            <InnerDiv maxwidth="50%">
+            <InnerDiv>
               <p className="link">
                 Please feel free to distribute this infographic to your
                 networks. Modifications of this work may not represent findings
@@ -761,6 +748,7 @@ const Main = () => {
               </p>
               <a
                 target="_blank"
+                rel="noreferrer"
                 href="https://www.albertahealthservices.ca/scns/page9682.aspx"
               >
                 <img src={Graphics.png[4]} alt="graphic" />
@@ -768,10 +756,11 @@ const Main = () => {
             </InnerDiv>
           </div>
         </Section>
-        <section id="footer">
-          <InnerDiv maxwidth="68%">
+
+        <section className="footer">
+          <InnerDiv altclass="copyright">
             <p>
-              Ahrari, M, Ail, S, Hartling L, Dong K, Drendel AL, Klassen TP,
+              Ahrari M, Ali S, Hartling L, Dong K, Drendel AL, Klassen TP,
               Schreiner K, Dyson MP. Nonmedical opioid use following short-term
               therapeutic exposure in children: a systematic review. Pediatrics
               [accepted].
@@ -779,7 +768,7 @@ const Main = () => {
           </InnerDiv>
         </section>
       </div>
-    </>
+    </div>
   );
 };
 

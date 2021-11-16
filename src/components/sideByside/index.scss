@@ -16,21 +16,21 @@
   }
 }
 
-@media screen and (max-width: 850px) {
+@media screen and (max-width: 64em) {
   .side-side__ {
-    width: 100% !important;
-    gap: 50px !important;
+    width: 100% ;
+    gap: 50px ;
     .side-one{
       p{
-        text-align: left !important;
+        text-align: left ;
       }
     }
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 48em) {
   .side-side__ {
     grid-template-columns: 1fr;
-    width: 80% !important;
+    width: 80% ;
   }
 }

@@ -4,33 +4,8 @@ import { FaChevronLeft } from "react-icons/fa";
 import { FaChevronRight } from "react-icons/fa";
 import Graphics from "../../images/Graphics";
 
-const Slider = ({
-  slide,
-  toptextDisplay,
-  btntext1Display,
-  btntext2Display,
-  gap,
-  barDisplay,
-  imgwidth,
-  maxwidth,
-  speclass,
-}) => {
+const Slider = ({ slide, speclass }) => {
   const [start, setStart] = useState(0);
-
-  // const slide = [
-  //   {
-  //     img: `${Graphics.svg[5]}`,
-  //     text: "After surgery",
-  //   },
-  //   {
-  //     img: `${Graphics.svg[6]}`,
-  //     text: "Severe fracture",
-  //   },
-  //   {
-  //     img: `${Graphics.svg[7]}`,
-  //     text: "With appendicitis",
-  //   },
-  // ];
 
   let text = slide[start].text,
     img = slide[start].img;
@@ -61,28 +36,19 @@ const Slider = ({
       scrollBars.classList.remove("active");
     }
     scrollB[start].classList.add("active");
-  }, [start]);
+  }, [start, speclass]);
 
   return (
-    <div className="container" style={{ width: `${maxwidth}`, gap: `${gap}` }}>
-      <p style={{ display: `${toptextDisplay}` }}>{text}</p>
+    <div className="container">
+      <p className="toptext">{text}</p>
       <div className="slider">
         <div>
           <FaChevronLeft className="scrollLeft" onClick={prev} />
         </div>
 
         <div className="slide">
-          <img
-            src={img}
-            alt="slide"
-            id="scrollImg"
-            style={{ width: `${imgwidth}` }}
-          />
-          <h6
-            id="scrollText"
-            className="boldText"
-            style={{ display: `${btntext1Display}` }}
-          >
+          <img src={img} alt="slide" id="scrollImg" />
+          <h6 id="scrollText" className="boldText btntext1">
             {text}
           </h6>
         </div>
@@ -90,8 +56,8 @@ const Slider = ({
           <FaChevronRight className="scrollRight" onClick={next} />
         </div>
       </div>
-      <p style={{ display: `${btntext2Display}` }}>{text}</p>
-      <div className="toggleScroll" style={{ display: `${barDisplay}` }}>
+      <p className="btntext2">{text}</p>
+      <div className="toggleScroll">
         {slide?.map(() => {
           return (
             <hr className={`toggleView ${speclass}`} key={Math.random()} />

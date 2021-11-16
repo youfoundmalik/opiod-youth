@@ -3,20 +3,17 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width: 850px) {
-}
-
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 48em) {
   .split__ {
-    grid-template-columns: 1fr !important;
-    gap: 30px !important;
+    grid-template-columns: 1fr ;
+    gap: 30px ;
 
     .column1 {
-      justify-content: center !important;
+      justify-content: center ;
       width: 100%;
     }
     .column2 {
-      justify-content: center !important;
+      justify-content: center ;
       width: 100%;
     }
   }

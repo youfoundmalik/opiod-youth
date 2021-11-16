@@ -1,11 +1,10 @@
 import React from "react";
 import "./index.scss";
 
-const InnerDiv = ({ maxwidth, justify, children }) => {
+const InnerDiv = ({ altclass, children }) => {
   return (
     <div
-      className="inner-div_"
-      style={{ width: `${maxwidth}`, justifyItems: `${justify}` }}
+      className={`inner-div_ ${altclass}`}
     >
       {children}
     </div>
