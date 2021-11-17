@@ -39,10 +39,10 @@ const Slider = ({ slide, speclass }) => {
   }, [start, speclass]);
 
   return (
-    <div className="container">
+    <div className="slider_container">
       <p className="toptext">{text}</p>
       <div className="slider">
-        <div>
+        <div className="left">
           <FaChevronLeft className="scrollLeft" onClick={prev} />
         </div>
 
@@ -52,7 +52,7 @@ const Slider = ({ slide, speclass }) => {
             {text}
           </h6>
         </div>
-        <div>
+        <div className="right">
           <FaChevronRight className="scrollRight" onClick={next} />
         </div>
       </div>

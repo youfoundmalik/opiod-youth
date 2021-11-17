@@ -42,65 +42,59 @@ const Main = () => {
     message:
       "Opioids are prescribed when people are in a lot of pain and other painkillers, like acetaminophen (Tylenol®) or ibuprofen (Advil®), aren’t enough.",
   };
-  const managing = [
-    {
-      heading: "Managing Pain is Important!",
-      message1:
-        "If pain is not treated, it can harm your physical and mental health. Pain can make you feel afraid and anxious. Reducing pain helps improve your overall quality of life. ",
-      message2:
-        "When using prescribed opioids, you have to be careful, like you should with any medicine. Remember, sometimes opioids are the best way to manage your pain.",
-      message3:
-        "There may be other options, along with opioids, to help with your pain. The options available to you depend on your situation. You and your parent/guardian can talk with your doctor to know more about your options.",
-    },
-    {
-      height: "150px",
-      alignI: "center",
-      align: "left",
-    },
-  ];
+  const managing = {
+    heading: "Managing Pain is Important!",
+    message1:
+      "If pain is not treated, it can harm your physical and mental health. Pain can make you feel afraid and anxious. Reducing pain helps improve your overall quality of life. ",
+    message2:
+      "When using prescribed opioids, you have to be careful, like you should with any medicine. Remember, sometimes opioids are the best way to manage your pain.",
+    message3:
+      "There may be other options, along with opioids, to help with your pain. The options available to you depend on your situation. You and your parent/guardian can talk with your doctor to know more about your options.",
+  };
+
   const safe = [
     {
       id: 1,
+      altclass: "one",
       image: [Graphics.svg[11]],
       message: "Take your medication exactly as prescribed. ",
     },
     {
       id: 2,
+      altclass: "two",
       image: [Graphics.svg[12]],
       message: "Ask your doctor or pharmacist any questions you have!",
     },
     {
       id: 3,
+      altclass: "three",
       image: [Graphics.svg[13]],
       message: "Don’t share your medications.",
     },
     {
       id: 4,
+      altclass: "four",
       image: [Graphics.svg[14]],
       message:
         "Keep your medication in a safe and secure location or have your parents store it for you. ",
     },
     {
       id: 5,
+      altclass: "five",
       image: [Graphics.svg[15]],
       message: "Make sure your pills remain in their original packaging.",
     },
     {
       id: 6,
+      altclass: "six",
       image: [Graphics.svg[16]],
       message: "Follow appropriate disposal procedures.",
     },
   ];
+
   const whatDo = [
     {
       heading: "What do I do with any pills that remain?",
-    },
-    {
-      size: "auto",
-      spacing: "0 18%",
-      align: "center",
-      height: "200px",
-      alignI: "center",
     },
     {
       message:
@@ -118,6 +112,7 @@ const Main = () => {
       image: [Graphics.svg[19]],
     },
   ];
+
   const effects = [
     {
       heading: "Side Effects",
@@ -125,13 +120,6 @@ const Main = () => {
         "If you experience side effects, make sure you or a parent/guardian contact your doctor.",
       warnings:
         "Make sure to immediately seek help from a healthcare professional or call 911 in the rare case that you experience the following symptoms: ",
-    },
-    {
-      size: "auto",
-      spacing: "3% 15%",
-      align: "center",
-      height: "auto",
-      alignI: "center",
     },
     [
       {
@@ -300,7 +288,7 @@ const Main = () => {
       text: "You can talk to your doctor ",
     },
   ];
-  
+
   return (
     <div className="body">
       <Nav />
@@ -382,184 +370,111 @@ const Main = () => {
           </InnerDiv>
         </Section>
 
-        {/* <Section id="managing">
-          <Heading>{managing[0].heading}</Heading>
-          <InnerDiv maxwidth="60%">
+        <Section id="managing">
+          <Heading>{managing.heading}</Heading>
+          <InnerDiv>
             <div className="holder">
-              <ParagraphBox
-                {...managing[1]}
-                background="#D8EBF4"
-                spacing="0 150px 0 180px"
-              >
-                <p>{managing[0].message1}</p>
+              <ParagraphBox altclass="para_one">
+                <p>{managing.message1}</p>
               </ParagraphBox>
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "left",
-                  position: "absolute",
-                  bottom: "-3px",
-                  left: "-50px",
-                }}
-              >
-                <img src={Graphics.svg[8]} alt="graphics" width="200px" />
+              <div className="image para_image1">
+                <img src={Graphics.svg[8]} alt="graphics" />
               </div>
             </div>
             <div className="holder">
-              <ParagraphBox
-                {...managing[1]}
-                background="#F2F2F2"
-                spacing="0 320px 0 80px"
-              >
-                <p>{managing[0].message2}</p>
+              <ParagraphBox altclass="para_two">
+                <p>{managing.message2}</p>
               </ParagraphBox>
-              <div
-                style={{
-                  width: "100%",
-                  textAlign: "right",
-                  position: "absolute",
-                  bottom: "-3px",
-                  right: "10px",
-                }}
-              >
-                <img src={Graphics.svg[9]} alt="graphics" width="300px" />
+              <div className="image para_image2">
+                <img src={Graphics.svg[9]} alt="graphics" />
               </div>
             </div>
             <div className="holder">
-              <ParagraphBox
-                {...managing[1]}
-                background="#D8EBF4"
-                spacing="0 100px 0 280px"
-              >
-                <p>{managing[0].message3}</p>
+              <ParagraphBox altclass="para_three">
+                <p>{managing.message3}</p>
               </ParagraphBox>
-              <div
-                style={{
-                  width: "100%",
-                  justifySelf: "flex-start",
-                  textAlign: "left",
-                  position: "absolute",
-                  bottom: "-3px",
-                  left: "5px",
-                }}
-              >
-                <img src={Graphics.svg[10]} alt="graphics" width="250px" />
+              <div className="image para_image3">
+                <img src={Graphics.svg[10]} alt="graphics" />
               </div>
             </div>
           </InnerDiv>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="safe">
-          <InnerDiv maxwidth="40%">
+        <Section id="safe">
+          <InnerDiv altclass="safe_innerdiv">
             <Heading>Be Safe!</Heading>
             <p>
               When used properly, opioids are a safe way to help manage pain.
               Here are important tips on how to use opioids safely.
             </p>
           </InnerDiv>
-          <Split columns="1fr 1fr 1fr" maxwidth="55%" gap="70px">
-            {safe.map(({ image, message, id }) => {
+          <Split altclass="safe_split">
+            {safe.map(({ image, message, altclass, id }) => {
               return (
-                <ThreeInOne
-                  h1Display="none"
-                  mainImg={image}
-                  key={id}
-                  maxwidth="100%"
-                >
+                <ThreeInOne mainImg={image} key={id} altclass={altclass}>
                   <p>{message}</p>
                 </ThreeInOne>
               );
             })}
           </Split>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="whatDo">
+        <Section id="whatDo">
           <Heading>{whatDo[0].heading}</Heading>
-          <InnerDiv maxwidth="60%">
-            <Split columns="5fr 2fr" alignI="center">
-              <div className="column1">
-                <ParagraphBox {...whatDo[1]} background="#455A64">
-                  <p className="white">{whatDo[2].message}</p>
+          <InnerDiv altclass="disposal_main">
+            <Split altclass="type1">
+              <div className="column1 text">
+                <ParagraphBox altclass="sec1">
+                  <p className="white">{whatDo[1].message}</p>
                 </ParagraphBox>
               </div>
-              <div className="column2">
-                <img
-                  src={whatDo[2].image}
-                  alt="graphics"
-                  style={{ height: `${whatDo[1].height}` }}
-                />
+              <div className="column2 image images">
+                <img src={whatDo[1].image} alt="graphics" />
               </div>
             </Split>
-            <Split columns="2fr 5fr" alignI="center">
-              <div className="column1">
-                <img
-                  src={whatDo[3].image}
-                  alt="graphics"
-                  style={{ height: `${whatDo[1].height}` }}
-                />
+            <Split altclass="type2">
+              <div className="column1 images">
+                <img src={whatDo[2].image} alt="graphics" />
               </div>
               <div className="column2">
-                <ParagraphBox {...whatDo[1]} background="#D8EBF4">
-                  <p className="primary">{whatDo[3].message}</p>
+                <ParagraphBox altclass="sec2">
+                  <p className="primary">{whatDo[2].message}</p>
                 </ParagraphBox>
               </div>
             </Split>
-            <Split columns="5fr 2fr" alignI="center">
-              <div className="column1">
-                <ParagraphBox {...whatDo[1]} background="#455A64">
-                  <p className="white">{whatDo[4].message}</p>
-                </ParagraphBox>
+            <Split altclass="type2">
+              <div className="column1 images">
+                <img src={whatDo[3].image} alt="graphics" />
               </div>
               <div className="column2">
-                <img
-                  src={whatDo[4].image}
-                  alt="graphics"
-                  style={{ height: `${whatDo[1].height}` }}
-                />
+                <ParagraphBox altclass="sec3">
+                  <p className="white">{whatDo[3].message}</p>
+                </ParagraphBox>
               </div>
             </Split>
           </InnerDiv>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="effects">
-          <InnerDiv maxwidth="30%">
+        <Section id="effects">
+          <InnerDiv altclass="effects_inner">
             <Heading>{effects[0].heading}</Heading>
             <p className="white">{effects[0].subheading}</p>
           </InnerDiv>
-          <ParagraphBox
-            size="70%"
-            alignI="center"
-            background="#D8EBF4"
-            justifyI="center"
-            spacing="2% 0"
-          >
+          <ParagraphBox altclass="slider-box">
             <p>Common side effects include:</p>
-            <Slider
-              slide={slide2}
-              btntext1Display="none"
-              toptextDisplay="none"
-              imgwidth="70%"
-              maxwidth="100%"
-              gap="20px"
-              speclass="effectslider"
-            />
+            <Slider slide={slide2} speclass="effectslider" />
           </ParagraphBox>
-          <Split maxwidth="70%" columns="1fr 4fr" alignI="center" gap="20px">
+          <Split altclass="effect-split">
             <div className="column1">
               <img src={Graphics.svg[20]} alt="graphics" />
             </div>
             <div className="column2">
-              <ParagraphBox {...effects[1]} background="#263238">
+              <ParagraphBox altclass="box">
                 <p className="white">{effects[0].warnings}</p>
-                <Split columns="1fr 1fr 1fr" gap="50px">
-                  {effects[2].map(({ id, image, message }) => {
+                <Split altclass="cards">
+                  {effects[1].map(({ id, image, message }) => {
                     return (
-                      <ThreeInOne
-                        h1Display="none"
-                        mainImg={image}
-                        key={id}
-                        maxwidth="100%"
-                      >
+                      <ThreeInOne mainImg={image} key={id}>
                         <p className="white">{message}</p>
                       </ThreeInOne>
                     );
@@ -568,7 +483,7 @@ const Main = () => {
               </ParagraphBox>
             </div>
           </Split>
-        </Section> */}
+        </Section>
 
         {/* <Section id="crisis">
           <ThreeInOne {...crisis[0]}>
