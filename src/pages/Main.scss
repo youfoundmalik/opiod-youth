@@ -142,7 +142,7 @@
             }
           }
         }
-        .container {
+        .slider_container {
           width: 100%;
           .toptext {
             display: none;
@@ -319,7 +319,7 @@
       background-color: #d8ebf4;
       justify-items: center;
       .inner {
-        width: 70%;
+        width: 100%;
         padding: 5% 0;
         gap: 20px;
         //slider start
@@ -381,20 +381,23 @@
           align-items: center;
           justify-items: center;
           padding: 0;
-          gap: 20px;
 
-          .split__ {
-            .three-in-one__ {
-              h1 {
-                display: none;
-              }
-              .inner-div_ {
-                width: 80%;
-                img {
-                  width: 100px;
+          .inner {
+            padding: 5% 0;
+            gap: 30px;
+            .split__ {
+              .three-in-one__ {
+                h1 {
+                  display: none;
                 }
-                p {
-                  margin: 0 0%;
+                .inner-div_ {
+                  width: 80%;
+                  img {
+                    width: 100px;
+                  }
+                  p {
+                    margin: 0 0%;
+                  }
                 }
               }
             }
@@ -405,88 +408,154 @@
   }
 
   #crisis {
-    h1 {
-      color: $mainColor;
-    }
     .three-in-one__ {
-      gap: 0px;
+      width: 90%;
+      justify-self: center;
+      gap: 20px;
+      h1 {
+        color: $mainColor;
+      }
+      .inner-div_ {
+        .ThreeinOne_inner_img {
+          display: none;
+        }
+      }
       span {
         font-weight: 800;
       }
     }
   }
+
   #misuse {
     border-top: 2px solid $altBAckground;
-    h1 {
-      color: $mainColor;
-    }
     .three-in-one__ {
-      gap: 0px;
-    }
-    .inner-div_ {
-      gap: 50px;
+      gap: 20px;
+      width: 90%;
+      justify-self: center;
+      h1 {
+        color: $mainColor;
+      }
+      .ThreeinOne_inner {
+        gap: 40px;
+        .ThreeinOne_inner_img {
+          display: none;
+        }
+        .misuse_inner {
+          width: 100%;
+        }
+      }
     }
   }
+
   #whenTo {
     border-top: 2px solid $altBAckground;
-    h1 {
-      color: $mainColor;
-    }
     .three-in-one__ {
-      gap: 0px;
-    }
-    .split__ {
-      .paragraph-box {
-        gap: 5px;
-        li {
-          font-weight: 400;
-          font-size: 16px;
+      width: 90%;
+      justify-self: center;
+      h1 {
+        color: $mainColor;
+      }
+      .ThreeinOne_inner {
+        .ThreeinOne_inner_img {
+          display: none;
+        }
+        .split__ {
+          width: 80%;
 
-          span {
-            position: relative;
-            left: 10px;
+          .paragraph-box {
+            width: 100%;
+            gap: 5px;
+            li {
+              text-align: left;
+              font-weight: 400;
+              font-size: 16px;
+              &::marker {
+                margin-right: 0px;
+              }
+
+              span {
+                position: relative;
+                left: 10px;
+              }
+            }
           }
         }
       }
     }
   }
+
   #where {
     border-top: 2px solid $altBAckground;
-    gap: 100px;
-    h1 {
-      color: $mainColor;
+    .inner-div_ {
+      width: 90%;
+      h1 {
+        color: $mainColor;
+      }
+      .paragraph-box {
+        background-color: $thirdColor;
+        width: 100%;
+        .inner {
+          padding: 20px;
+          .slider_container {
+            gap: 20px;
+            .slider {
+              .slide {
+                .btntext1 {
+                  display: none;
+                }
+              }
+            }
+            .btntext2 {
+              display: none;
+            }
+          }
+        }
+      }
     }
     .split__ {
-      h1 {
-        text-align: left;
-      }
+      width: 90%;
       .column1 {
+        width: 100%;
         display: grid;
         gap: 20px;
+        h1 {
+          color: $mainColor;
+        }
 
         h2 {
           background-color: $thirdColor;
-          width: 80%;
           padding: 10px 0;
           border-radius: 50px;
         }
       }
+      .column2 {
+        width: 80%;
+        justify-self: center;
+      }
     }
   }
+
   #remember {
     background-color: $thirdColor;
-    gap: 0px;
     .inner-div_ {
-      gap: 50px;
+      gap: 30px;
+      width: 90%;
       .paragraph-box {
-        gap: 5px;
-        span {
-          position: relative;
-          left: 10px;
+        width: 100%;
+        .inner {
+          gap: 5px;
+          li {
+            text-align: left;
+            span {
+              position: relative;
+              left: 10px;
+            }
+          }
         }
       }
     }
   }
+
   #links {
     padding-bottom: 0px;
     .heading {
@@ -553,6 +622,7 @@
       }
     }
   }
+
   .footer {
     padding: 30px 0;
     background-color: $altBAckground;
@@ -638,7 +708,7 @@
               }
             }
           }
-          .container {
+          .slider_container {
             order: 2;
           }
         }
@@ -759,16 +829,16 @@
     }
     #effects {
       .inner-div_ {
-        width: 80%;
+        width: 90%;
       }
       .slider-box {
         width: 90%;
         border-radius: 100px;
         .inner {
-          width: 70%;
+          width: 100%;
           //slider start
           .slider_container {
-            width: 90%;
+            width: 100%;
             justify-self: center;
             gap: 10px;
             p {
@@ -780,7 +850,7 @@
             }
             .slider {
               width: 100%;
-              grid-template-columns: 2fr 2fr 2fr;
+              grid-template-columns: 2fr 4fr 2fr;
               .btntext1 {
                 display: none;
               }
@@ -813,7 +883,8 @@
           border-radius: 100px;
           .paragraph-box {
             width: 80%;
-            .inner{
+            .inner {
+              padding: 3% 0;
               gap: 20px;
               .split__ {
                 align-items: flex-start;
@@ -835,7 +906,99 @@
         }
       }
     }
+    #crisis {
+      .three-in-one__ {
+        width: 80%;
+      }
+    }
+    #misuse {
+      .three-in-one__ {
+        width: 80%;
+        .ThreeinOne_inner {
+          gap: 50px;
+          .misuse_inner {
+            width: 90%;
+          }
+        }
+      }
+    }
+    #whenTo {
+      .three-in-one__ {
+        width: 80%;
+        .ThreeinOne_inner {
+          .split__ {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            width: 90%;
 
+            .paragraph-box {
+              width: 100%;
+              .inner {
+                gap: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #where {
+      gap: 100px;
+      .inner-div_ {
+        width: 80%;
+        .paragraph-box {
+          width: 100%;
+          margin-top: 30px;
+          .inner {
+            width: 100%;
+            padding: 30px 0;
+            .slider_container {
+              gap: 20px;
+              width: 70%;
+              justify-self: center;
+              .slider {
+                grid-template-columns: 1fr 3fr 1fr;
+                .slide {
+                  .btntext1 {
+                    display: none;
+                  }
+                }
+              }
+              .btntext2 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .split__ {
+        width: 80%;
+        grid-template-columns: 3fr 2fr;
+        .column1 {
+          h1 {
+            text-align: left;
+          }
+          width: 100%;
+          display: grid;
+          gap: 20px;
+
+          h2 {
+            background-color: $thirdColor;
+            width: 90%;
+            padding: 10px 0;
+            border-radius: 50px;
+          }
+        }
+        .column2 {
+          width: 100%;
+          justify-self: center;
+        }
+      }
+    }
+    #remember {
+      .inner-div_ {
+        width: 80%;
+      }
+    }
     #links {
       .heading {
         width: 80%;
@@ -1065,21 +1228,21 @@
       .slider-box {
         width: 70%;
         border-radius: 500px;
-        .inner{
+        .inner {
           width: 100%;
           //slider start
-        .slider_container {
-          width: 70%;
-          gap: 20px;
-          .slider {
-            width: 100%;
-            grid-template-columns: 2fr 3fr 2fr;
-          }
-          .toggleScroll {
+          .slider_container {
             width: 70%;
+            gap: 20px;
+            .slider {
+              width: 100%;
+              grid-template-columns: 2fr 3fr 2fr;
+            }
+            .toggleScroll {
+              width: 70%;
+            }
           }
-        }
-        // slider end
+          // slider end
         }
       }
       .split__ {
@@ -1111,7 +1274,96 @@
         }
       }
     }
+    #crisis {
+      .three-in-one__ {
+        width: 60%;
+      }
+    }
+    #misuse {
+      .three-in-one__ {
+        width: 65%;
+        .ThreeinOne_inner {
+          .misuse_inner {
+            width: 80%;
+          }
+        }
+      }
+    }
+    #whenTo {
+      .three-in-one__ {
+        width: 55%;
+        .ThreeinOne_inner {
+          .split__ {
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            width: 90%;
 
+            .paragraph-box {
+              width: 100%;
+              .inner {
+                gap: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+    #where {
+      gap: 100px;
+      .inner-div_ {
+        width: 65%;
+        .paragraph-box {
+          .inner {
+            .slider_container {
+              width: 75%;
+              justify-self: center;
+              .slider {
+                grid-template-columns: 1fr 2fr 1fr;
+                .slide {
+                  .btntext1 {
+                    display: none;
+                  }
+                }
+              }
+              .btntext2 {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+      .split__ {
+        width: 60%;
+        grid-template-columns: 5fr 2fr;
+        .column1 {
+          gap: 20px;
+
+          h2 {
+            width: 80%;
+          }
+        }
+        .column2 {
+          width: 100%;
+        }
+      }
+    }
+    #remember {
+      .inner-div_ {
+        width: 60%;
+        .paragraph-box {
+          .inner {
+            gap: 5px;
+            li {
+              text-align: left;
+              span {
+                position: relative;
+                left: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
     #links {
       .heading {
         width: 60%;

@@ -1,4 +1,3 @@
-import React from "react";
 import illustration1 from "./illustrations/Youth_illustrations-01.svg";
 import illustration2 from "./illustrations/Youth_illustrations-02.svg";
 import illustration3 from "./illustrations/Youth_illustrations-03.svg";

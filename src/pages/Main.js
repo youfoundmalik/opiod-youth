@@ -63,7 +63,7 @@ const Main = () => {
       id: 2,
       altclass: "two",
       image: [Graphics.svg[12]],
-      message: "Ask your doctor or pharmacist any questions you have!",
+      message: "Ask your doctor or pharmacist any questions you have.",
     },
     {
       id: 3,
@@ -98,7 +98,7 @@ const Main = () => {
     },
     {
       message:
-        "You or your parent/guardian can return unused medication to any pharmacy. Just put the pills in an unmarked and closed plastic bag andthey will dispose of it.",
+        "You or your parent/guardian can return unused medication to any pharmacy. Just put the pills in an unmarked and closed plastic bag and they will dispose of it.",
       image: [Graphics.svg[17]],
     },
     {
@@ -139,64 +139,35 @@ const Main = () => {
       },
     ],
   ];
-  const crisis = [
-    {
-      heading: "Opioid Crisis and Nonmedical Use",
-      maxwidth: "60%",
-      align: "center",
-      justify: "",
-      innerjustify: "",
-      imgDisplay: "none",
-    },
-    {
-      subheading:
-        "Many young people may feel uncomfortable using opioids because of the opioid crisis and the deaths related to illegally produced toxic opioids such as fentanyl.",
-      image: [Graphics.svg[29]],
-      desc: "Nonmedical opioid use is when people use opioids without a prescription from a doctor.",
-    },
-  ];
-  const misuse = [
-    {
-      heading: "Misusing Opioids",
-      maxwidth: "65%",
-      align: "center",
-      imgDisplay: "none",
-    },
-    {
-      subheading:
-        "We do not know for sure if using prescription opioids for a short amount of time leads to nonmedical use later. And it is not clear what makes some people more likely than others to start using opioids in a harmful way. So, it is important to be careful when taking opioids. If you are worried about you or a loved one make sure to let your doctor know.",
-      image: [Graphics.svg[30]],
-    },
-  ];
-  const whenTo = [
-    {
-      heading: "When to Seek Help",
-      maxwidth: "60%",
-      align: "center",
-      imgDisplay: "none",
-    },
-    {
-      subheading:
-        "Here are some signs that you should reach out for help about your opioid use:",
-      image: [Graphics.svg[31]],
-    },
-    {
-      maxwidth: "90%",
-      columns: "1fr 1fr",
-      alignI: "flex-start",
-      alignT: "left",
-      gap: "50px",
-      margin: "0",
-    },
-  ];
-  const where = [
-    {
-      heading: "Where to Seek help",
-      subheading:
-        "If you are experiencing signs of nonmedical opioid use, make sure to reach out and ask for help. ",
-      heading2: "For a list of other resources click the following:",
-    },
-  ];
+
+  const crisis = {
+    heading: "Opioid Crisis and Nonmedical Use",
+    subheading:
+      "Many young people may feel uncomfortable using opioids because of the opioid crisis and the deaths related to illegally produced toxic opioids such as fentanyl.",
+    image: [Graphics.svg[29]],
+    desc: "Nonmedical opioid use is when people use opioids without a prescription from a doctor.",
+  };
+
+  const misuse = {
+    heading: "Misusing Opioids",
+    subheading:
+      "We do not know for sure if using prescription opioids for a short amount of time leads to nonmedical use later. And it is not clear what makes some people more likely than others to start using opioids in a harmful way. So, it is important to be careful when taking opioids. If you are worried about you or a loved one make sure to let your doctor know.",
+    image: [Graphics.svg[30]],
+  };
+
+  const whenTo = {
+    heading: "When to Seek Help",
+    subheading:
+      "Here are some signs that you should reach out for help about your opioid use:",
+    image: [Graphics.svg[31]],
+  };
+
+  const where = {
+    heading: "Where to Seek Help",
+    subheading:
+      "If you are experiencing signs of nonmedical opioid use, make sure to reach out and ask for help. ",
+    heading2: "For a list of other resources click the following:",
+  };
 
   const footer = [
     {
@@ -205,6 +176,7 @@ const Main = () => {
     },
     {
       text1: "ARCHE Systematic Review",
+      link1: "https://doi.org/10.1542/peds.2021-051927",
       link2:
         "https://trekk.ca/resources?utf8=%E2%9C%93&tag_id=D010147&external_resource_type=Quick_glance",
       text2: "TREKK Bottom Line Recommendations",
@@ -256,6 +228,7 @@ const Main = () => {
       text: "With appendicitis",
     },
   ];
+
   const slide2 = [
     {
       img: `${Graphics.svg[21]}`,
@@ -274,17 +247,18 @@ const Main = () => {
       text: "Drowsiness",
     },
   ];
+
   const slide3 = [
     {
       img: `${Graphics.svg[32]}`,
       text: "You can talk to a parent/guardian or another adult",
     },
     {
-      img: `${Graphics.svg[35]}`,
-      text: "You can Kids Help Phone (1-800-668-6868), which provides free counselling 24 hours a day",
+      img: `${Graphics.svg[36]}`,
+      text: "You can call Kids Help Phone (1-800-668-6868), which provides free counselling 24 hours a day",
     },
     {
-      img: `${Graphics.svg[36]}`,
+      img: `${Graphics.svg[35]}`,
       text: "You can talk to your doctor ",
     },
   ];
@@ -485,11 +459,11 @@ const Main = () => {
           </Split>
         </Section>
 
-        {/* <Section id="crisis">
-          <ThreeInOne {...crisis[0]}>
-            <p>{crisis[1].subheading}</p>
-            <img src={crisis[1].image} alt="graphic" />
-            <p className="primary">{crisis[1].desc}</p>
+        <Section id="crisis">
+          <ThreeInOne heading={crisis.heading} altclass="crisis_">
+            <p>{crisis.subheading}</p>
+            <img src={crisis.image} alt="graphic" />
+            <p className="primary">{crisis.desc}</p>
             <p>
               People start using opioids without a prescription or for a reason
               other than what the doctor intended for a number of reasons, but
@@ -497,83 +471,66 @@ const Main = () => {
               <span>This can be dangerous.</span>
             </p>
           </ThreeInOne>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="misuse">
-          <ThreeInOne {...misuse[0]}>
-            <p>{misuse[1].subheading}</p>
-            <InnerDiv maxwidth="80%">
-              <img src={misuse[1].image} alt="graphic" />
+        <Section id="misuse">
+          <ThreeInOne heading={misuse.heading} altclass="misuse_">
+            <p>{misuse.subheading}</p>
+            <InnerDiv altclass="misuse_inner">
+              <img src={misuse.image} alt="graphic" />
             </InnerDiv>
           </ThreeInOne>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="whenTo">
-          <ThreeInOne {...whenTo[0]}>
-            <p>{whenTo[1].subheading}</p>
-            <img src={whenTo[1].image} alt="graphic" />
-            <Split {...whenTo[2]}>
-              <div className="column1">
-                <ParagraphBox>
-                  <li>
-                    <span>
-                      If you start to take more pills than you were told to or
-                      run out early
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      If you take opioids for longer than originally planned
-                    </span>
-                  </li>
-                  <li>
-                    <span>If you can’t seem to stop taking them</span>
-                  </li>
-                </ParagraphBox>
-              </div>
-              <div className="column2">
-                <ParagraphBox>
-                  <li>
-                    <span>
-                      If you start taking them for reasons other than pain; like
-                      to help feel happier or to stop anxiety
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      If you start taking other people’s opioid medication
-                    </span>
-                  </li>
-                </ParagraphBox>
-              </div>
+        <Section id="whenTo">
+          <ThreeInOne heading={whenTo.heading} altclass="whenTo_">
+            <p>{whenTo.subheading}</p>
+            <img src={whenTo.image} alt="graphic" />
+            <Split altclass="whenTo_split">
+              <ParagraphBox altclass="column1">
+                <li>
+                  <span>
+                    If you start to take more pills than you were told to or run
+                    out early
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    If you take opioids for longer than originally planned
+                  </span>
+                </li>
+                <li>
+                  <span>If you can’t seem to stop taking them</span>
+                </li>
+              </ParagraphBox>
+              <ParagraphBox altclass="column2">
+                <li>
+                  <span>
+                    If you start taking them for reasons other than pain; like
+                    to help feel happier or to stop anxiety
+                  </span>
+                </li>
+                <li>
+                  <span>
+                    If you start taking other people’s opioid medication
+                  </span>
+                </li>
+              </ParagraphBox>
             </Split>
           </ThreeInOne>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="where">
-          <InnerDiv maxwidth="70%">
-            <Heading>{where[0].heading}</Heading>
-            <p>{where[0].subheading}</p>
-            <ParagraphBox
-              size="100%"
-              spacing="3% 0"
-              justifyI="center"
-              background="#D8EBF4"
-            >
-              <Slider
-                slide={slide3}
-                btntext1Display="none"
-                btntext2Display="none"
-                imgwidth="55%"
-                maxwidth="75%"
-                gap="20px"
-                speclass="whereslider"
-              />
+        <Section id="where">
+          <InnerDiv altclass="where_">
+            <Heading>{where.heading}</Heading>
+            <p>{where.subheading}</p>
+            <ParagraphBox>
+              <Slider slide={slide3} speclass="whereslider" />
             </ParagraphBox>
           </InnerDiv>
-          <Split maxwidth="60%" columns="5fr 2fr" alignI="center">
+          <Split>
             <div className="column1">
-              <Heading>{where[0].heading2}</Heading>
+              <Heading>{where.heading2}</Heading>
               <h2>Health Canada</h2>
               <h2>AHS</h2>
             </div>
@@ -581,12 +538,12 @@ const Main = () => {
               <img src={Graphics.svg[34]} alt="graphic" />
             </div>
           </Split>
-        </Section> */}
+        </Section>
 
-        {/* <Section id="remember">
-          <Heading>Remember</Heading>
-          <InnerDiv maxwidth="60%">
-            <ParagraphBox align="left" size="80%">
+        <Section id="remember">
+          <InnerDiv>
+            <Heading>Remember</Heading>
+            <ParagraphBox>
               <li>
                 <span>Treating pain is important for your health!</span>
               </li>
@@ -597,7 +554,7 @@ const Main = () => {
               </li>
               <li>
                 <span>
-                  Ask your doctor and pharmacist any questions you have.
+                Make sure to follow the instructions given by your doctor.
                 </span>
               </li>
               <li>
@@ -611,7 +568,7 @@ const Main = () => {
             </ParagraphBox>
             <img src={Graphics.svg[33]} alt="graphic" />
           </InnerDiv>
-        </Section> */}
+        </Section>
 
         <Section id="links">
           <InnerDiv altclass="heading">
@@ -619,7 +576,11 @@ const Main = () => {
             <p>{footer[0].subheading}</p>
           </InnerDiv>
           <InnerDiv altclass="color">
-            <p className="color-background">{footer[1].text1}</p>
+          <p className="color-background">
+              <a target="_blank" rel="noreferrer" href={footer[1].link1}>
+                {footer[1].text1}
+              </a>
+            </p>
             <p className="color-background">
               <a target="_blank" rel="noreferrer" href={footer[1].link2}>
                 {footer[1].text2}
