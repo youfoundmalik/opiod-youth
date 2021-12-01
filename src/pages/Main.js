@@ -180,8 +180,7 @@ const Main = () => {
       link2:
         "https://trekk.ca/resources?utf8=%E2%9C%93&tag_id=D010147&external_resource_type=Quick_glance",
       text2: "TREKK Bottom Line Recommendations",
-      link3:
-        "https://www.google.com/url?q=https://www.canada.ca/en/health-canada/services/opioids.html&sa=D&source=docs&ust=1634759298037000&usg=AOvVaw37bkCsZ5xgKUmM5wV4drUb",
+      link3: "https://www.canada.ca/en/health-canada/services/opioids.html",
       text3: "Health Canada",
       link4:
         "https://www.canada.ca/en/health-canada/services/safe-disposal-prescription-drugs.html",
@@ -531,8 +530,24 @@ const Main = () => {
           <Split>
             <div className="column1">
               <Heading>{where.heading2}</Heading>
-              <h2>Health Canada</h2>
-              <h2>AHS</h2>
+              <h2>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.canada.ca/en/health-canada/services/substance-use/get-help/get-help-problematic-substance-use.html"
+                >
+                  Health Canada
+                </a>
+              </h2>
+              <h2>
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  href="https://www.albertahealthservices.ca/info/Page16025.aspx"
+                >
+                  AHS
+                </a>
+              </h2>
             </div>
             <div className="column2">
               <img src={Graphics.svg[34]} alt="graphic" />
@@ -554,7 +569,7 @@ const Main = () => {
               </li>
               <li>
                 <span>
-                Make sure to follow the instructions given by your doctor.
+                  Make sure to follow the instructions given by your doctor.
                 </span>
               </li>
               <li>
@@ -576,7 +591,7 @@ const Main = () => {
             <p>{footer[0].subheading}</p>
           </InnerDiv>
           <InnerDiv altclass="color">
-          <p className="color-background">
+            <p className="color-background">
               <a target="_blank" rel="noreferrer" href={footer[1].link1}>
                 {footer[1].text1}
               </a>
@@ -639,7 +654,14 @@ const Main = () => {
               Ahrari M, Ali S, Hartling L, Dong K, Drendel AL, Klassen TP,
               Schreiner K, Dyson MP. Nonmedical opioid use following short-term
               therapeutic exposure in children: a systematic review. Pediatrics
-              [accepted].
+              2021; e2021051927.{" "}
+              <a
+                target="_blank"
+                rel="noreferrer"
+                href="https://doi.org/10.1542/peds.2021-051927"
+              >
+                https://doi.org/10.1542/peds.2021-051927
+              </a>
             </p>
           </InnerDiv>
         </section>

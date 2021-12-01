@@ -526,6 +526,10 @@
           background-color: $thirdColor;
           padding: 10px 0;
           border-radius: 50px;
+          a{
+            color: #2E3338;
+            text-decoration: none;
+          }
         }
       }
       .column2 {
@@ -632,6 +636,11 @@
         text-align: center;
         font-style: italic;
         font-weight: 400 !important;
+        a{
+          color: #2e3338;
+          text-decoration: none;
+          font-weight: 500;
+        }
       }
     }
   }
